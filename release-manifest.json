@@ -23,12 +23,12 @@
       "size": 5811
     },
     "plugins/sitelemetry/.claude-plugin/plugin.json": {
-      "sha256": "915a161daf653cc660e92369a42b14575a67ff7a87a963fe80bb7b9e27ef3938",
-      "size": 395
+      "sha256": "915cb1327b9751f3d147abcf192590ff5951ecc404408345a9462a0a9eebed1e",
+      "size": 394
     },
     "plugins/sitelemetry/.codex-plugin/plugin.json": {
-      "sha256": "000b805f54bc37affe1f5b3a549be526cec2bf8d70f08c5fa8fbe60d278ad1bb",
-      "size": 1763
+      "sha256": "340f1bbfc275c4847d0ffc02285a59601bb8be28b1f686fddeb302ad21097662",
+      "size": 1762
     },
     "plugins/sitelemetry/.mcp.claude.json": {
       "sha256": "da4d3c48680dc3c2c22801e76bb9487b199f42b8ef84685ccf07bf1162a4ca94",
@@ -67,8 +67,8 @@
       "size": 383
     },
     "plugins/sitelemetry/skills/local-web-audit/SKILL.md": {
-      "sha256": "c15b60b17eae8afcb46a5a6d54c008d60923e5184068eb80e433d3ea6168d9d3",
-      "size": 7414
+      "sha256": "5197ad9ddd407a0b3475f106d3e80dbc7bca79d665a5b54b12e64dbe3d28a4f3",
+      "size": 7409
     },
     "README.md": {
       "sha256": "33c3595f9f2a661c80ffde036d2759382be6d468c0eb5e5d85162dcde1e2ba5b",
