@@ -19,7 +19,7 @@
       "size": 32
     },
     ".github/workflows/validate.yml": {
-      "sha256": "6a390f6a399a1189b66f22eabc39958822047c2d3e6a955ed7ebde5aa1c46547",
+      "sha256": "9f273dc56352eaca49e7871efd80309c3d454fddb79ee3dead212e4c209754f6",
       "size": 5811
     },
     "plugins/sitelemetry/.claude-plugin/plugin.json": {
