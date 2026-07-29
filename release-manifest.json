@@ -6,10 +6,6 @@
   "privateApplicationSourceIncluded": false,
   "pluginRoot": "plugins/sitelemetry",
   "files": {
-    ".gitattributes": {
-      "sha256": "23302dd90b8bb74b44d365fafef8df20f809b61cb347023951ecf60a88a29651",
-      "size": 32
-    },
     ".agents/plugins/marketplace.json": {
       "sha256": "04398d4e2dc4069caad6404fb71adf4f393ff392d7916fe3fb03eb721bf8b60e",
       "size": 377
@@ -17,6 +13,14 @@
     ".claude-plugin/marketplace.json": {
       "sha256": "a909504763d8da00c86e9e38e1a7e263edc352ce388c03bc783559ddf09d641e",
       "size": 602
+    },
+    ".gitattributes": {
+      "sha256": "23302dd90b8bb74b44d365fafef8df20f809b61cb347023951ecf60a88a29651",
+      "size": 32
+    },
+    ".github/workflows/validate.yml": {
+      "sha256": "6a390f6a399a1189b66f22eabc39958822047c2d3e6a955ed7ebde5aa1c46547",
+      "size": 5811
     },
     "plugins/sitelemetry/.claude-plugin/plugin.json": {
       "sha256": "915a161daf653cc660e92369a42b14575a67ff7a87a963fe80bb7b9e27ef3938",

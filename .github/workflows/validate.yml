@@ -1,0 +1,130 @@
+name: Validate source-private marketplace
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: marketplace-validation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Verify published bytes
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+      - name: Verify allowlist, checksums, identities, and source privacy
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import { execFileSync } from 'node:child_process';
+          import { createHash } from 'node:crypto';
+          import { existsSync, lstatSync, readFileSync } from 'node:fs';
+          import path from 'node:path';
+
+          const root = process.cwd();
+          const marker = '.sitelemetry-plugin-marketplace-staging.json';
+          const manifestName = 'release-manifest.json';
+          const manifest = JSON.parse(readFileSync(manifestName, 'utf8'));
+
+          assert.equal(manifest.schemaVersion, 1, 'unsupported release manifest schema');
+          assert.equal(manifest.name, 'sitelemetry-plugin-marketplace', 'unexpected release identity');
+          assert.equal(
+            manifest.repository,
+            process.env.GITHUB_REPOSITORY,
+            'release manifest repository does not match this repository'
+          );
+          assert.equal(manifest.privateApplicationSourceIncluded, false, 'private source flag must remain false');
+          assert.equal(manifest.pluginRoot, 'plugins/sitelemetry', 'unexpected plugin root');
+          assert(
+            manifest.files && typeof manifest.files === 'object' && !Array.isArray(manifest.files),
+            'release manifest files must be an object'
+          );
+          assert(!Object.hasOwn(manifest.files, marker), 'internal staging marker entered the release manifest');
+          assert(!existsSync(marker), 'internal staging ownership marker must never be published');
+
+          const tracked = execFileSync('git', ['ls-files', '-z'], { encoding: 'buffer' })
+            .toString('utf8')
+            .split('\0')
+            .filter(Boolean)
+            .sort();
+          assert(!tracked.includes(marker), 'internal staging ownership marker must never be tracked');
+
+          const declared = Object.keys(manifest.files).sort();
+          const expectedTracked = [...declared, manifestName].sort();
+          assert.deepEqual(tracked, expectedTracked, 'tracked files differ from the reviewed release allowlist');
+          assert(declared.includes('.gitattributes'), 'public line-ending policy is not declared');
+          assert(
+            declared.includes('.github/workflows/validate.yml'),
+            'public validation workflow is not declared'
+          );
+
+          const forbiddenPath = /(?:^|\/)(?:mcp|src)(?:\/|$)|(?:^|\/)(?:package\.json|\.env(?:\.|$)|.*\.map|.*\.pem|.*\.key)$/i;
+          const privateReference = [
+            /(?:^|[/"'`])(?:\.\.\/)+(?:mcp|src)\//m,
+            /(?:^|[\\/"'`])(?:\.\.\\)+(?:mcp|src)\\/m,
+            /runtime[\\/](?:mcp|src)[\\/]/i,
+            /sourceMappingURL\s*=/i,
+            /C:\\Users\\/i
+          ];
+
+          for (const relative of declared) {
+            assert(relative && relative === relative.replaceAll('\\', '/'), `invalid release path: ${relative}`);
+            assert(!path.isAbsolute(relative) && !relative.split('/').includes('..'), `unsafe release path: ${relative}`);
+            assert(!forbiddenPath.test(relative), `private or forbidden release path: ${relative}`);
+
+            const absolute = path.resolve(root, relative);
+            assert(
+              absolute.startsWith(`${root}${path.sep}`),
+              `release path escaped the repository: ${relative}`
+            );
+            const metadata = lstatSync(absolute);
+            assert(metadata.isFile() && !metadata.isSymbolicLink(), `release entry is not a regular file: ${relative}`);
+
+            const bytes = readFileSync(absolute);
+            const declaredMetadata = manifest.files[relative];
+            assert.equal(bytes.byteLength, declaredMetadata.size, `${relative} size mismatch`);
+            assert.equal(
+              createHash('sha256').update(bytes).digest('hex'),
+              declaredMetadata.sha256,
+              `${relative} digest mismatch`
+            );
+
+            if (/\.(?:json|md|mjs|svg|ya?ml)$/i.test(relative)) {
+              const contents = bytes.toString('utf8');
+              for (const forbidden of privateReference) {
+                assert(!forbidden.test(contents), `private-source reference found in ${relative}`);
+              }
+            }
+          }
+
+          const codex = JSON.parse(readFileSync(
+            'plugins/sitelemetry/.codex-plugin/plugin.json',
+            'utf8'
+          ));
+          const claude = JSON.parse(readFileSync(
+            'plugins/sitelemetry/.claude-plugin/plugin.json',
+            'utf8'
+          ));
+          assert.equal(codex.name, 'sitelemetry', 'unexpected Codex plugin identity');
+          assert.equal(claude.name, codex.name, 'Codex and Claude plugin identities differ');
+          assert.equal(codex.version, manifest.version, 'Codex plugin version differs from release');
+          assert.equal(claude.version, manifest.version, 'Claude plugin version differs from release');
+
+          process.stdout.write(
+            `Validated ${declared.length} source-private marketplace files for ${manifest.repository}@${manifest.version}.\n`
+          );
+          NODE
