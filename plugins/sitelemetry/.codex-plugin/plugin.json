@@ -1,0 +1,43 @@
+{
+  "name": "sitelemetry",
+  "version": "0.4.0",
+  "description": "Audit production websites through Sitelemetry Cloud and loopback development sites with the signed Local Agent.",
+  "author": {
+    "name": "Sitelemetry",
+    "email": "support@sitelemetry.com",
+    "url": "https://sitelemetry.com"
+  },
+  "homepage": "https://sitelemetry.com/mcp-guide",
+  "keywords": [
+    "website-audit",
+    "security",
+    "seo",
+    "accessibility",
+    "performance",
+    "ai-visibility",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Sitelemetry",
+    "shortDescription": "Cloud and local website assurance",
+    "longDescription": "Audit production websites through Sitelemetry's OAuth-protected cloud service, or inspect localhost development sites through the signed loopback-only Local Agent. The local engine is delivered as a verified platform binary without shipping Sitelemetry's proprietary source. Cover security, technical SEO, AI visibility, analytics integrations, accessibility, and performance with prioritized evidence and remediation guidance.",
+    "developerName": "Sitelemetry",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://sitelemetry.com",
+    "privacyPolicyURL": "https://sitelemetry.com/privacy",
+    "termsOfServiceURL": "https://sitelemetry.com/terms",
+    "defaultPrompt": [
+      "Audit my verified website and prioritize the most urgent fixes.",
+      "Audit my local development site and prioritize fixes.",
+      "Run a full audit, improve the code, and verify the result."
+    ],
+    "brandColor": "#62F5BB",
+    "composerIcon": "./assets/sitelemetry-icon.svg",
+    "logo": "./assets/sitelemetry-logo-1024.png"
+  }
+}

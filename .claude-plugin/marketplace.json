@@ -1,0 +1,23 @@
+{
+  "name": "sitelemetry",
+  "description": "Sitelemetry Cloud and signed loopback-only Local Agent for website assurance.",
+  "owner": {
+    "name": "Sitelemetry",
+    "email": "support@sitelemetry.com"
+  },
+  "plugins": [
+    {
+      "name": "sitelemetry",
+      "source": "./plugins/sitelemetry",
+      "description": "Audit production websites through Sitelemetry Cloud and loopback development sites with the signed Local Agent.",
+      "category": "development",
+      "tags": [
+        "security",
+        "seo",
+        "accessibility",
+        "performance",
+        "mcp"
+      ]
+    }
+  ]
+}

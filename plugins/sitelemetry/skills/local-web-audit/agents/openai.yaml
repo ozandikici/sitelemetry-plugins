@@ -1,0 +1,4 @@
+interface:
+  display_name: "Local Web Audit"
+  short_description: "Audit, improve, and verify localhost sites"
+  default_prompt: "Run a full Sitelemetry audit of my local development site, implement safe fixes with native coding tools, re-run the exact same audit, and report the before/after difference. Ask for explicit confirmation immediately before any critical or risky edit."

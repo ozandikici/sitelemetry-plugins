@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "sitelemetry": {
+      "type": "http",
+      "url": "https://sitelemetry.com/mcp"
+    },
+    "sitelemetry-local": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "local-agent/launcher.mjs"
+      ],
+      "cwd": "."
+    }
+  }
+}

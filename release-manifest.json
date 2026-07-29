@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "name": "sitelemetry-plugin-marketplace",
+  "version": "0.4.0",
+  "repository": "ozandikici/sitelemetry-plugins",
+  "privateApplicationSourceIncluded": false,
+  "pluginRoot": "plugins/sitelemetry",
+  "files": {
+    ".gitattributes": {
+      "sha256": "23302dd90b8bb74b44d365fafef8df20f809b61cb347023951ecf60a88a29651",
+      "size": 32
+    },
+    ".agents/plugins/marketplace.json": {
+      "sha256": "04398d4e2dc4069caad6404fb71adf4f393ff392d7916fe3fb03eb721bf8b60e",
+      "size": 377
+    },
+    ".claude-plugin/marketplace.json": {
+      "sha256": "a909504763d8da00c86e9e38e1a7e263edc352ce388c03bc783559ddf09d641e",
+      "size": 602
+    },
+    "plugins/sitelemetry/.claude-plugin/plugin.json": {
+      "sha256": "915a161daf653cc660e92369a42b14575a67ff7a87a963fe80bb7b9e27ef3938",
+      "size": 395
+    },
+    "plugins/sitelemetry/.codex-plugin/plugin.json": {
+      "sha256": "000b805f54bc37affe1f5b3a549be526cec2bf8d70f08c5fa8fbe60d278ad1bb",
+      "size": 1763
+    },
+    "plugins/sitelemetry/.mcp.claude.json": {
+      "sha256": "da4d3c48680dc3c2c22801e76bb9487b199f42b8ef84685ccf07bf1162a4ca94",
+      "size": 281
+    },
+    "plugins/sitelemetry/.mcp.json": {
+      "sha256": "f88a2dd6a0d2402800caad77c7ea417a1f52ee04ad64984cce8217b5c58b5d9a",
+      "size": 277
+    },
+    "plugins/sitelemetry/assets/sitelemetry-icon.svg": {
+      "sha256": "ac1de8668125af3a1f6232a6a416d148a6c7fc9ef6e1c4a2783bb1a1a45b69ac",
+      "size": 499
+    },
+    "plugins/sitelemetry/assets/sitelemetry-logo-1024.png": {
+      "sha256": "cda624e4fd65681fc35ec3701a494b07162a3399176c1d32cd992751d57c96cd",
+      "size": 17676
+    },
+    "plugins/sitelemetry/local-agent/launcher-core.mjs": {
+      "sha256": "2d4acdb7ab5987a35ae58a4aa671cf2a8f35d6df11c841aee497b689f0b1ecf6",
+      "size": 23822
+    },
+    "plugins/sitelemetry/local-agent/launcher.mjs": {
+      "sha256": "35bea2cffc06d2e667996f59c487ea659018c190d8580764f9ca11d72ac00f05",
+      "size": 747
+    },
+    "plugins/sitelemetry/local-agent/README.md": {
+      "sha256": "74c5f73f7133de0ff72ce9638330955d13505bd859c0318c033f7ba63f51e9a9",
+      "size": 1656
+    },
+    "plugins/sitelemetry/README.md": {
+      "sha256": "5156aefa7e220f2dacb489d841a22e7d0f4bcc589391b3266ebfbfc9f605391c",
+      "size": 5094
+    },
+    "plugins/sitelemetry/skills/local-web-audit/agents/openai.yaml": {
+      "sha256": "7f440ccb67e2be30bb2b6c86deee61edc8200fafbe607f7b5d8c46c1723488d4",
+      "size": 383
+    },
+    "plugins/sitelemetry/skills/local-web-audit/SKILL.md": {
+      "sha256": "c15b60b17eae8afcb46a5a6d54c008d60923e5184068eb80e433d3ea6168d9d3",
+      "size": 7414
+    },
+    "README.md": {
+      "sha256": "33c3595f9f2a661c80ffde036d2759382be6d468c0eb5e5d85162dcde1e2ba5b",
+      "size": 2001
+    }
+  }
+}

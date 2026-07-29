@@ -1,0 +1,12 @@
+{
+  "name": "sitelemetry",
+  "version": "0.4.0",
+  "description": "Audit production websites through Sitelemetry Cloud and loopback development sites with the signed Local Agent.",
+  "author": {
+    "name": "Sitelemetry",
+    "email": "support@sitelemetry.com",
+    "url": "https://sitelemetry.com"
+  },
+  "homepage": "https://sitelemetry.com/mcp-guide",
+  "mcpServers": "./.mcp.claude.json"
+}
