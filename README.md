@@ -38,13 +38,22 @@ Windows PowerShell:
 claude plugin marketplace add ozandikici/sitelemetry-plugins; if ($LASTEXITCODE -eq 0) { claude plugin install sitelemetry@sitelemetry }
 ```
 
+Open `/mcp` inside Claude Code, select the Sitelemetry server and choose
+**Authenticate** to complete browser sign-in and approval.
+
 ## What one plugin installs
 
-- `sitelemetry`: the OAuth-protected Sitelemetry Cloud MCP server for public
-  and verified production targets.
+- `sitelemetry`: the OAuth-protected Sitelemetry Cloud MCP server for production
+  websites, using the endpoint selected for your client.
 - `sitelemetry-local`: a loopback-only Local Agent for `localhost`,
   `127.0.0.1`, and `::1` development sites.
 - `local-web-audit`: the audit, safe-fix, re-test, and before/after workflow.
+
+Codex connects to `https://sitelemetry.com/mcp`; Claude Code connects to
+`https://claude-mcp.sitelemetry.com/mcp`. Claude Code requires current ownership
+verification for the exact HTTPS target before each cloud audit. See the
+[client setup guide](https://sitelemetry.com/mcp-guide) for verification and
+account requirements.
 
 The Local Agent launcher downloads only the exact platform binary declared by
 Sitelemetry's signed release manifest. It verifies the manifest's Ed25519

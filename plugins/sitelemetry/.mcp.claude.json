@@ -2,7 +2,7 @@
   "mcpServers": {
     "sitelemetry": {
       "type": "http",
-      "url": "https://sitelemetry.com/mcp"
+      "url": "https://claude-mcp.sitelemetry.com/mcp"
     },
     "sitelemetry-local": {
       "type": "stdio",
