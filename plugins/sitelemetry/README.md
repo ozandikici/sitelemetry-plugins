@@ -31,14 +31,23 @@ never depends on this repository's checkout path.
 
 ## Connect
 
-The plugin registers the remote server at `https://sitelemetry.com/mcp`. Codex or Claude Code discovers Sitelemetry's OAuth endpoints and opens browser approval when the remote connection is first used. Local audits use the verified local binary without OAuth.
+The plugin selects the cloud endpoint for your client:
+
+- Codex: `https://sitelemetry.com/mcp`, configured in `.mcp.json`.
+- Claude Code: `https://claude-mcp.sitelemetry.com/mcp`, configured in `.mcp.claude.json`.
+
+Both cloud endpoints use Sitelemetry OAuth. In Claude Code, open `/mcp`, select
+the Sitelemetry server and choose **Authenticate**, then complete the browser
+approval. Claude Code requires current ownership verification for the exact
+HTTPS target before every cloud audit. See the
+[client setup guide](https://sitelemetry.com/mcp-guide) for verification and
+account requirements. Local audits use the verified local binary without OAuth.
 
 For production and non-loopback targets, use the remote server and only audit websites you own or are explicitly authorized to test.
 
-The source-private distribution repository contains only this reviewed plugin
-surface, not Sitelemetry's application or audit-engine source. After that
-repository is published, one line installs Cloud, Local Agent, and the
-audit/fix/re-test skill together:
+The public distribution repository contains only this reviewed plugin surface,
+not Sitelemetry's proprietary application or audit-engine source. Install Cloud,
+Local Agent, and the audit/fix/re-test skill together:
 
 ```console
 codex plugin marketplace add ozandikici/sitelemetry-plugins && codex plugin add sitelemetry@sitelemetry
@@ -61,9 +70,12 @@ codex mcp login sitelemetry
 ```
 
 ```console
-claude mcp add --transport http sitelemetry https://sitelemetry.com/mcp
-claude mcp login sitelemetry
+claude mcp add --transport http sitelemetry https://claude-mcp.sitelemetry.com/mcp
 ```
+
+After adding the server, open `/mcp` inside Claude Code, select Sitelemetry and
+choose **Authenticate**. Follow the browser sign-in and approval steps, as
+described in the [Claude Code OAuth guide](https://code.claude.com/docs/en/mcp#authenticate-with-remote-mcp-servers).
 
 Other Streamable HTTP clients can use this source-free configuration:
 
