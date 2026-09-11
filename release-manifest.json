@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "sitelemetry-plugin-marketplace",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "repository": "ozandikici/sitelemetry-plugins",
   "privateApplicationSourceIncluded": false,
   "pluginRoot": "plugins/sitelemetry",
@@ -23,16 +23,16 @@
       "size": 5811
     },
     "plugins/sitelemetry/.claude-plugin/plugin.json": {
-      "sha256": "915cb1327b9751f3d147abcf192590ff5951ecc404408345a9462a0a9eebed1e",
+      "sha256": "2e966611dc314aff09a2ea5eb61eba8e74862da86a8eff0888d4044bd005a4da",
       "size": 394
     },
     "plugins/sitelemetry/.codex-plugin/plugin.json": {
-      "sha256": "340f1bbfc275c4847d0ffc02285a59601bb8be28b1f686fddeb302ad21097662",
-      "size": 1762
+      "sha256": "628e22b6e86b8e4439ec41754ab98c29dfbf930dbd2d275558cf0fec667a8e2c",
+      "size": 1794
     },
     "plugins/sitelemetry/.mcp.claude.json": {
-      "sha256": "15b6c9e74461b5db7e90fd19d5df6073791dc90e85f35da285eb3e4862c58e3c",
-      "size": 292
+      "sha256": "da4d3c48680dc3c2c22801e76bb9487b199f42b8ef84685ccf07bf1162a4ca94",
+      "size": 281
     },
     "plugins/sitelemetry/.mcp.json": {
       "sha256": "f88a2dd6a0d2402800caad77c7ea417a1f52ee04ad64984cce8217b5c58b5d9a",
@@ -59,8 +59,8 @@
       "size": 1656
     },
     "plugins/sitelemetry/README.md": {
-      "sha256": "540e866ceef6cffdd4565d03618acf1c3cdc061a8b29121da80a4b063379a248",
-      "size": 5700
+      "sha256": "cfcbf9207d6e5654198599c8832cac83e639ef61939acf89ad25a74abfc843bd",
+      "size": 5750
     },
     "plugins/sitelemetry/skills/local-web-audit/agents/openai.yaml": {
       "sha256": "7f440ccb67e2be30bb2b6c86deee61edc8200fafbe607f7b5d8c46c1723488d4",
@@ -71,8 +71,8 @@
       "size": 7409
     },
     "README.md": {
-      "sha256": "742540155e2382fcb35183ee03e203b52341d34d191a0ef9edfb14b4e814ebde",
-      "size": 2487
+      "sha256": "6a1cadd12e6cf282640fb4e8c2caf88a25eb6f00c4fa12c761fb8a282a9e6f65",
+      "size": 2502
     }
   }
 }

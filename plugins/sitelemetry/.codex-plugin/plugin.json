@@ -1,13 +1,13 @@
 {
   "name": "sitelemetry",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Audit production websites through Sitelemetry Cloud and loopback development sites with the signed Local Agent.",
   "author": {
     "name": "Sitelemetry",
     "email": "support@sitelemetry.com",
-    "url": "https://sitelemetry.com"
+    "url": "https://sitelemetry.com/openai-plugin"
   },
-  "homepage": "https://sitelemetry.com/mcp-guide",
+  "homepage": "https://sitelemetry.com/openai-plugin",
   "keywords": [
     "website-audit",
     "security",
@@ -28,7 +28,7 @@
     "capabilities": [
       "Read"
     ],
-    "websiteURL": "https://sitelemetry.com",
+    "websiteURL": "https://sitelemetry.com/openai-plugin",
     "privacyPolicyURL": "https://sitelemetry.com/privacy",
     "termsOfServiceURL": "https://sitelemetry.com/terms",
     "defaultPrompt": [
