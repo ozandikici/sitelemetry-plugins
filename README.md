@@ -5,7 +5,7 @@ the Codex and Claude Code plugin manifests, Local Agent launcher, audit skill,
 documentation, and brand assets. Sitelemetry's proprietary application and
 audit-engine source are not part of this repository.
 
-Version: `0.4.0`
+Version: `0.4.1`
 
 ## Install in Codex
 
@@ -44,14 +44,15 @@ Open `/mcp` inside Claude Code, select the Sitelemetry server and choose
 ## What one plugin installs
 
 - `sitelemetry`: the OAuth-protected Sitelemetry Cloud MCP server for production
-  websites, using the endpoint selected for your client.
+  websites, using the general OAuth endpoint.
 - `sitelemetry-local`: a loopback-only Local Agent for `localhost`,
   `127.0.0.1`, and `::1` development sites.
 - `local-web-audit`: the audit, safe-fix, re-test, and before/after workflow.
 
-Codex connects to `https://sitelemetry.com/mcp`; Claude Code connects to
-`https://claude-mcp.sitelemetry.com/mcp`. Claude Code requires current ownership
-verification for the exact HTTPS target before each cloud audit. See the
+Codex and Claude Code connect to `https://sitelemetry.com/mcp`. Public audits
+can use public targets; protected security modules and Full Audit require
+workspace ownership verification. Claude.ai's Directory connection is
+documented separately. See the
 [client setup guide](https://sitelemetry.com/mcp-guide) for verification and
 account requirements.
 

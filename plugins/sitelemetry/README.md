@@ -31,15 +31,16 @@ never depends on this repository's checkout path.
 
 ## Connect
 
-The plugin selects the cloud endpoint for your client:
+Both plugin clients use the general cloud endpoint:
 
 - Codex: `https://sitelemetry.com/mcp`, configured in `.mcp.json`.
-- Claude Code: `https://claude-mcp.sitelemetry.com/mcp`, configured in `.mcp.claude.json`.
+- Claude Code: `https://sitelemetry.com/mcp`, configured in `.mcp.claude.json`.
 
-Both cloud endpoints use Sitelemetry OAuth. In Claude Code, open `/mcp`, select
+The cloud endpoint uses Sitelemetry OAuth. In Claude Code, open `/mcp`, select
 the Sitelemetry server and choose **Authenticate**, then complete the browser
-approval. Claude Code requires current ownership verification for the exact
-HTTPS target before every cloud audit. See the
+approval. Public audits can use public targets; protected security modules and
+Full Audit require workspace ownership verification. Claude.ai's Directory
+connection is documented separately. See the
 [client setup guide](https://sitelemetry.com/mcp-guide) for verification and
 account requirements. Local audits use the verified local binary without OAuth.
 
@@ -70,7 +71,7 @@ codex mcp login sitelemetry
 ```
 
 ```console
-claude mcp add --transport http sitelemetry https://claude-mcp.sitelemetry.com/mcp
+claude mcp add --transport http sitelemetry https://sitelemetry.com/mcp
 ```
 
 After adding the server, open `/mcp` inside Claude Code, select Sitelemetry and

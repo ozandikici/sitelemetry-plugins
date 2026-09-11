@@ -1,6 +1,6 @@
 {
   "name": "sitelemetry",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Audit production websites through Sitelemetry Cloud and loopback development sites with the signed Local Agent.",
   "author": {
     "name": "Sitelemetry",
