@@ -2,7 +2,7 @@
 
 import { runLauncher } from './launcher-core.mjs';
 
-const LAUNCHER_VERSION = '0.4.0';
+const LAUNCHER_VERSION = '0.4.2';
 const RELEASE_ORIGIN = 'https://sitelemetry.com';
 const PUBLIC_KEY_PEM = `-----BEGIN PUBLIC KEY-----
 MCowBQYDK2VwAyEA0RH7lKaBxNt9Q6SnExdbK8r7U++q9JRUdvJCsiAVoeU=

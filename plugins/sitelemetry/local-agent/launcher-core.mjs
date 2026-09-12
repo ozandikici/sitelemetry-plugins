@@ -42,6 +42,9 @@ export async function runLauncher(config) {
   const trustedConfig = normalizeConfig(config);
   const cacheRoot = defaultCacheRoot();
   await ensurePrivateDirectory(cacheRoot);
+  // Windows keeps a running process's working directory locked. Release the
+  // installed plugin before update checks; the binary already runs outside it.
+  process.chdir(cacheRoot);
 
   const release = await withCacheLock(cacheRoot, async () => {
     const signed = await loadSignedManifest(trustedConfig, cacheRoot);

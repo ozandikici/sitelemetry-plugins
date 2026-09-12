@@ -16,6 +16,13 @@ results to the MCP client, where the client's model provider may process them
 under the user's client/provider settings. Only the signed release manifest
 and platform binary are fetched from Sitelemetry by the launcher.
 
+The launcher also moves its own working directory into that cache before
+checking for updates. Both the launcher and the binary therefore release the
+installed plugin directory, allowing Windows clients to remove or replace
+the plugin while those processes are still running. Version 0.4.2 fixes the
+directory lock left by earlier launchers. Already running older launchers
+must exit once before their previous plugin directory can be removed.
+
 The launcher fails closed when no verified release is available. It never
 falls back to an unpackaged JavaScript runtime, a PATH executable, or a
 user-supplied download URL.
