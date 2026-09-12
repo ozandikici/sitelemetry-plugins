@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "sitelemetry-plugin-marketplace",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "repository": "ozandikici/sitelemetry-plugins",
   "privateApplicationSourceIncluded": false,
   "pluginRoot": "plugins/sitelemetry",
@@ -23,11 +23,11 @@
       "size": 5811
     },
     "plugins/sitelemetry/.claude-plugin/plugin.json": {
-      "sha256": "2e966611dc314aff09a2ea5eb61eba8e74862da86a8eff0888d4044bd005a4da",
+      "sha256": "890b79aed5b61c29d3cea80d9f54cc28f1e6cafd4d12873fcd8bbe7fc4ee337c",
       "size": 394
     },
     "plugins/sitelemetry/.codex-plugin/plugin.json": {
-      "sha256": "628e22b6e86b8e4439ec41754ab98c29dfbf930dbd2d275558cf0fec667a8e2c",
+      "sha256": "b8f2f42142ac805dad8ca60d9fc6eb496d0a06d998cffbf1194a9789472fcb88",
       "size": 1794
     },
     "plugins/sitelemetry/.mcp.claude.json": {
@@ -47,16 +47,16 @@
       "size": 17676
     },
     "plugins/sitelemetry/local-agent/launcher-core.mjs": {
-      "sha256": "2d4acdb7ab5987a35ae58a4aa671cf2a8f35d6df11c841aee497b689f0b1ecf6",
-      "size": 23822
+      "sha256": "0550b38b44d75a02014a03a91b21d1b05f1f7495535920c7683656ae4cd9221d",
+      "size": 24007
     },
     "plugins/sitelemetry/local-agent/launcher.mjs": {
-      "sha256": "35bea2cffc06d2e667996f59c487ea659018c190d8580764f9ca11d72ac00f05",
+      "sha256": "d0df809c3d61e3ca23d1372c622bfb7abf9dfe51a7741d892a4df9a5ad0cb100",
       "size": 747
     },
     "plugins/sitelemetry/local-agent/README.md": {
-      "sha256": "74c5f73f7133de0ff72ce9638330955d13505bd859c0318c033f7ba63f51e9a9",
-      "size": 1656
+      "sha256": "fdc004e8b9e163602fb9502314b518ed7d64de9838b12f4ba9f532b72bffc388",
+      "size": 2101
     },
     "plugins/sitelemetry/README.md": {
       "sha256": "cfcbf9207d6e5654198599c8832cac83e639ef61939acf89ad25a74abfc843bd",
@@ -71,7 +71,7 @@
       "size": 7409
     },
     "README.md": {
-      "sha256": "6a1cadd12e6cf282640fb4e8c2caf88a25eb6f00c4fa12c761fb8a282a9e6f65",
+      "sha256": "a84522a3036229fd4886a39a219010feeb6cc3a0f915d6860ae04f36c9de66df",
       "size": 2502
     }
   }

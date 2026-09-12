@@ -5,7 +5,7 @@ the Codex and Claude Code plugin manifests, Local Agent launcher, audit skill,
 documentation, and brand assets. Sitelemetry's proprietary application and
 audit-engine source are not part of this repository.
 
-Version: `0.4.1`
+Version: `0.4.2`
 
 ## Install in Codex
 
