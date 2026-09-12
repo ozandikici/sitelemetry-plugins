@@ -1,0 +1,10 @@
+{
+  "name": "sitelemetry",
+  "version": "0.1.0",
+  "description": "Website security, SEO, AI visibility, integration, accessibility and performance audits with evidence and remediation.",
+  "mcpServers": {
+    "sitelemetry": {
+      "httpUrl": "https://sitelemetry.com/mcp"
+    }
+  }
+}
