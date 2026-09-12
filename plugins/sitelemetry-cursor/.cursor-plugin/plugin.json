@@ -1,0 +1,16 @@
+{
+  "name": "sitelemetry",
+  "displayName": "Sitelemetry",
+  "version": "0.1.0",
+  "description": "Audit website security, SEO, AI visibility, accessibility, performance, and integrations through Sitelemetry Cloud.",
+  "author": {
+    "name": "Sitelemetry",
+    "email": "support@sitelemetry.com"
+  },
+  "homepage": "https://github.com/ozandikici/sitelemetry-plugins/tree/main/plugins/sitelemetry-cursor",
+  "repository": "https://github.com/ozandikici/sitelemetry-plugins",
+  "license": "MIT",
+  "keywords": ["website", "security", "seo", "accessibility", "performance", "mcp"],
+  "logo": "assets/sitelemetry-logo-1024.png",
+  "mcpServers": "mcp.json"
+}

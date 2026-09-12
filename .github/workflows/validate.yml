@@ -124,6 +124,35 @@ jobs:
           assert.equal(codex.version, manifest.version, 'Codex plugin version differs from release');
           assert.equal(claude.version, manifest.version, 'Claude plugin version differs from release');
 
+          // Cursor loads an isolated remote-only plugin, never the local launcher
+          // or general /mcp connection from the other client packages.
+          const cursorRoot = 'plugins/sitelemetry-cursor';
+          const cursorMarketplace = JSON.parse(readFileSync('.cursor-plugin/marketplace.json', 'utf8'));
+          assert.equal(cursorMarketplace.name, 'sitelemetry');
+          assert.equal(cursorMarketplace.plugins.length, 1, 'unexpected Cursor plugin');
+          assert.equal(cursorMarketplace.plugins[0].name, 'sitelemetry');
+          assert.equal(cursorMarketplace.plugins[0].source, cursorRoot, 'Cursor plugin boundary changed');
+          const cursor = JSON.parse(readFileSync(`${cursorRoot}/.cursor-plugin/plugin.json`, 'utf8'));
+          assert.equal(cursor.name, 'sitelemetry');
+          assert.equal(cursor.license, 'MIT');
+          assert.match(cursor.version, /^\d+\.\d+\.\d+$/);
+          assert.equal(cursor.mcpServers, 'mcp.json');
+          assert.equal(cursor.logo, 'assets/sitelemetry-logo-1024.png');
+          assert.deepEqual(JSON.parse(readFileSync(`${cursorRoot}/mcp.json`, 'utf8')), {
+            mcpServers: { sitelemetry: { url: 'https://sitelemetry.com/mcp/v2' } }
+          }, 'Cursor must use only the neutral OAuth resource, without secrets or commands');
+          for (const field of ['rules', 'skills', 'agents', 'commands', 'hooks']) {
+            assert(!Object.hasOwn(cursor, field), `unexpected Cursor executable component: ${field}`);
+          }
+          assert.deepEqual(declared.filter(file => file.startsWith(`${cursorRoot}/`)).map(file => file.slice(cursorRoot.length + 1)).sort(), [
+            '.cursor-plugin/plugin.json', 'LICENSE', 'README.md',
+            'assets/sitelemetry-icon.svg', 'assets/sitelemetry-logo-1024.png', 'mcp.json'
+          ].sort(), 'Cursor must not inherit executable components from another plugin');
+          for (const asset of ['sitelemetry-icon.svg', 'sitelemetry-logo-1024.png']) {
+            assert.equal(manifest.files[`${cursorRoot}/assets/${asset}`].sha256,
+              manifest.files[`plugins/sitelemetry/assets/${asset}`].sha256, 'Cursor brand assets differ from approved assets');
+          }
+
           process.stdout.write(
             `Validated ${declared.length} source-private marketplace files for ${manifest.repository}@${manifest.version}.\n`
           );

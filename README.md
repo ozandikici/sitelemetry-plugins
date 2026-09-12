@@ -1,11 +1,18 @@
 # Sitelemetry plugins
 
 This public distribution contains the Sitelemetry integration surface only:
-the Codex and Claude Code plugin manifests, Local Agent launcher, audit skill,
+the Codex, Claude Code, and Cursor plugin manifests, Local Agent launcher, audit skill,
 documentation, and brand assets. Sitelemetry's proprietary application and
 audit-engine source are not part of this repository.
 
-Version: `0.4.2`
+Codex and Claude Code package version: `0.4.2`
+
+## Connect in Cursor
+
+The [Cursor plugin](plugins/sitelemetry-cursor/README.md) connects to Sitelemetry
+Cloud using OAuth. It provides seven website audit tools through the
+`https://sitelemetry.com/mcp/v2` endpoint. See the
+[Cursor setup guide](docs/cursor.md) for manual MCP configuration.
 
 ## Install in Codex
 
@@ -41,7 +48,7 @@ claude plugin marketplace add ozandikici/sitelemetry-plugins; if ($LASTEXITCODE 
 Open `/mcp` inside Claude Code, select the Sitelemetry server and choose
 **Authenticate** to complete browser sign-in and approval.
 
-## What one plugin installs
+## What the Codex and Claude Code plugin installs
 
 - `sitelemetry`: the OAuth-protected Sitelemetry Cloud MCP server for production
   websites, using the general OAuth endpoint.
