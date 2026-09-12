@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "sitelemetry": {
+      "url": "https://sitelemetry.com/mcp/v2"
+    }
+  }
+}

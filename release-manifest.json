@@ -19,8 +19,8 @@
       "size": 32
     },
     ".github/workflows/validate.yml": {
-      "sha256": "9f273dc56352eaca49e7871efd80309c3d454fddb79ee3dead212e4c209754f6",
-      "size": 5811
+      "sha256": "26b37e39fe68e945a66de6c741907f99e0eebed0891c04c3b4e9e8e2541b16f2",
+      "size": 8015
     },
     "plugins/sitelemetry/.claude-plugin/plugin.json": {
       "sha256": "890b79aed5b61c29d3cea80d9f54cc28f1e6cafd4d12873fcd8bbe7fc4ee337c",
@@ -71,8 +71,40 @@
       "size": 7409
     },
     "README.md": {
-      "sha256": "a84522a3036229fd4886a39a219010feeb6cc3a0f915d6860ae04f36c9de66df",
-      "size": 2502
+      "sha256": "130ff022198110fd23573f911f8943e8e4ac9e3c280e9dcb44965033c592466f",
+      "size": 2855
+    },
+    ".cursor-plugin/marketplace.json": {
+      "sha256": "602a0048cbc0fcd091c3f0405a8a03c840ac5b7ce8c6423c08f4d4bbe74d0359",
+      "size": 413
+    },
+    "docs/cursor.md": {
+      "sha256": "373db7e0666f32976f79f6871c9077835d9bab03d7f3fdd23de45d444f61a799",
+      "size": 1527
+    },
+    "plugins/sitelemetry-cursor/.cursor-plugin/plugin.json": {
+      "sha256": "5ec35c2d7be7715296a36c91fac1a7ae676dda6f05bad5c0ff24f710713000c3",
+      "size": 655
+    },
+    "plugins/sitelemetry-cursor/LICENSE": {
+      "sha256": "f377f352bf7e728ba517617215cfc6229bf9700a61f88f2c57f53309d6b93e78",
+      "size": 1068
+    },
+    "plugins/sitelemetry-cursor/README.md": {
+      "sha256": "0a4d8adcccd9ce34dfbf195d303b471f5c6932c00923cfe7b6aef32d5c0e4e3f",
+      "size": 1986
+    },
+    "plugins/sitelemetry-cursor/assets/sitelemetry-icon.svg": {
+      "sha256": "ac1de8668125af3a1f6232a6a416d148a6c7fc9ef6e1c4a2783bb1a1a45b69ac",
+      "size": 499
+    },
+    "plugins/sitelemetry-cursor/assets/sitelemetry-logo-1024.png": {
+      "sha256": "cda624e4fd65681fc35ec3701a494b07162a3399176c1d32cd992751d57c96cd",
+      "size": 17676
+    },
+    "plugins/sitelemetry-cursor/mcp.json": {
+      "sha256": "2eb7fa9e1e769a632ffd1fa79bd2dce615b7cf18a5b771126013f69007e4e59e",
+      "size": 99
     }
   }
 }

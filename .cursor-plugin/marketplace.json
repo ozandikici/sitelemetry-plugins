@@ -1,0 +1,17 @@
+{
+  "name": "sitelemetry",
+  "owner": {
+    "name": "Sitelemetry",
+    "email": "support@sitelemetry.com"
+  },
+  "metadata": {
+    "description": "Sitelemetry website audits for Cursor."
+  },
+  "plugins": [
+    {
+      "name": "sitelemetry",
+      "source": "plugins/sitelemetry-cursor",
+      "description": "Audit website security, SEO, AI visibility, accessibility, performance, and integrations."
+    }
+  ]
+}
