@@ -1,8 +1,8 @@
 # Sitelemetry plugins
 
 This public distribution contains the Sitelemetry integration surface only:
-the Codex, Claude Code, and Cursor plugin manifests, Local Agent launcher, audit skill,
-documentation, and brand assets. Sitelemetry's proprietary application and
+the Codex, Claude Code, and Cursor plugin manifests, Gemini CLI extension,
+Local Agent launcher, audit skill, documentation, and brand assets. Sitelemetry's proprietary application and
 audit-engine source are not part of this repository.
 
 Codex and Claude Code package version: `0.4.2`
@@ -13,6 +13,12 @@ The [Cursor plugin](plugins/sitelemetry-cursor/README.md) connects to Sitelemetr
 Cloud using OAuth. It provides seven website audit tools through the
 `https://sitelemetry.com/mcp/v2` endpoint. See the
 [Cursor setup guide](docs/cursor.md) for manual MCP configuration.
+
+## Connect in Gemini CLI
+
+The [Gemini CLI extension](docs/gemini-cli.md) connects to Sitelemetry Cloud
+through the general OAuth endpoint. It installs one remote MCP server and no
+local executable. See the guide for installation and browser authentication.
 
 ## Install in Codex
 

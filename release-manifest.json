@@ -22,6 +22,14 @@
       "sha256": "26b37e39fe68e945a66de6c741907f99e0eebed0891c04c3b4e9e8e2541b16f2",
       "size": 8015
     },
+    "docs/gemini-cli.md": {
+      "sha256": "caced10c0557ce6580e451ec066e4bbfa3734ebe28a5d5e3a5e4ef4b6446bb62",
+      "size": 3470
+    },
+    "gemini-extension.json": {
+      "sha256": "1a234a3feffca352720bb36875ba8cbd03a332cd3aba23366ef7474406664676",
+      "size": 286
+    },
     "plugins/sitelemetry/.claude-plugin/plugin.json": {
       "sha256": "890b79aed5b61c29d3cea80d9f54cc28f1e6cafd4d12873fcd8bbe7fc4ee337c",
       "size": 394
@@ -71,8 +79,8 @@
       "size": 7409
     },
     "README.md": {
-      "sha256": "130ff022198110fd23573f911f8943e8e4ac9e3c280e9dcb44965033c592466f",
-      "size": 2855
+      "sha256": "c1a63cb7fada152e82123cc81058a872ae80ad8787955408baf7b0c8e208a168",
+      "size": 3135
     },
     ".cursor-plugin/marketplace.json": {
       "sha256": "602a0048cbc0fcd091c3f0405a8a03c840ac5b7ce8c6423c08f4d4bbe74d0359",
