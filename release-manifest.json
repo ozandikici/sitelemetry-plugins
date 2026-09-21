@@ -14,6 +14,10 @@
       "sha256": "a909504763d8da00c86e9e38e1a7e263edc352ce388c03bc783559ddf09d641e",
       "size": 602
     },
+    ".cursor-plugin/marketplace.json": {
+      "sha256": "602a0048cbc0fcd091c3f0405a8a03c840ac5b7ce8c6423c08f4d4bbe74d0359",
+      "size": 413
+    },
     ".gitattributes": {
       "sha256": "23302dd90b8bb74b44d365fafef8df20f809b61cb347023951ecf60a88a29651",
       "size": 32
@@ -21,6 +25,14 @@
     ".github/workflows/validate.yml": {
       "sha256": "26b37e39fe68e945a66de6c741907f99e0eebed0891c04c3b4e9e8e2541b16f2",
       "size": 8015
+    },
+    "README.md": {
+      "sha256": "c1a63cb7fada152e82123cc81058a872ae80ad8787955408baf7b0c8e208a168",
+      "size": 3135
+    },
+    "docs/cursor.md": {
+      "sha256": "373db7e0666f32976f79f6871c9077835d9bab03d7f3fdd23de45d444f61a799",
+      "size": 1527
     },
     "docs/gemini-cli.md": {
       "sha256": "caced10c0557ce6580e451ec066e4bbfa3734ebe28a5d5e3a5e4ef4b6446bb62",
@@ -30,65 +42,9 @@
       "sha256": "1a234a3feffca352720bb36875ba8cbd03a332cd3aba23366ef7474406664676",
       "size": 286
     },
-    "plugins/sitelemetry/.claude-plugin/plugin.json": {
-      "sha256": "890b79aed5b61c29d3cea80d9f54cc28f1e6cafd4d12873fcd8bbe7fc4ee337c",
-      "size": 394
-    },
-    "plugins/sitelemetry/.codex-plugin/plugin.json": {
-      "sha256": "b8f2f42142ac805dad8ca60d9fc6eb496d0a06d998cffbf1194a9789472fcb88",
-      "size": 1794
-    },
-    "plugins/sitelemetry/.mcp.claude.json": {
-      "sha256": "da4d3c48680dc3c2c22801e76bb9487b199f42b8ef84685ccf07bf1162a4ca94",
-      "size": 281
-    },
-    "plugins/sitelemetry/.mcp.json": {
-      "sha256": "f88a2dd6a0d2402800caad77c7ea417a1f52ee04ad64984cce8217b5c58b5d9a",
-      "size": 277
-    },
-    "plugins/sitelemetry/assets/sitelemetry-icon.svg": {
-      "sha256": "ac1de8668125af3a1f6232a6a416d148a6c7fc9ef6e1c4a2783bb1a1a45b69ac",
-      "size": 499
-    },
-    "plugins/sitelemetry/assets/sitelemetry-logo-1024.png": {
-      "sha256": "cda624e4fd65681fc35ec3701a494b07162a3399176c1d32cd992751d57c96cd",
-      "size": 17676
-    },
-    "plugins/sitelemetry/local-agent/launcher-core.mjs": {
-      "sha256": "0550b38b44d75a02014a03a91b21d1b05f1f7495535920c7683656ae4cd9221d",
-      "size": 24007
-    },
-    "plugins/sitelemetry/local-agent/launcher.mjs": {
-      "sha256": "d0df809c3d61e3ca23d1372c622bfb7abf9dfe51a7741d892a4df9a5ad0cb100",
-      "size": 747
-    },
-    "plugins/sitelemetry/local-agent/README.md": {
-      "sha256": "fdc004e8b9e163602fb9502314b518ed7d64de9838b12f4ba9f532b72bffc388",
-      "size": 2101
-    },
-    "plugins/sitelemetry/README.md": {
-      "sha256": "cfcbf9207d6e5654198599c8832cac83e639ef61939acf89ad25a74abfc843bd",
-      "size": 5750
-    },
-    "plugins/sitelemetry/skills/local-web-audit/agents/openai.yaml": {
-      "sha256": "7f440ccb67e2be30bb2b6c86deee61edc8200fafbe607f7b5d8c46c1723488d4",
-      "size": 383
-    },
-    "plugins/sitelemetry/skills/local-web-audit/SKILL.md": {
-      "sha256": "5197ad9ddd407a0b3475f106d3e80dbc7bca79d665a5b54b12e64dbe3d28a4f3",
-      "size": 7409
-    },
-    "README.md": {
-      "sha256": "c1a63cb7fada152e82123cc81058a872ae80ad8787955408baf7b0c8e208a168",
-      "size": 3135
-    },
-    ".cursor-plugin/marketplace.json": {
-      "sha256": "602a0048cbc0fcd091c3f0405a8a03c840ac5b7ce8c6423c08f4d4bbe74d0359",
-      "size": 413
-    },
-    "docs/cursor.md": {
-      "sha256": "373db7e0666f32976f79f6871c9077835d9bab03d7f3fdd23de45d444f61a799",
-      "size": 1527
+    "llms-install.md": {
+      "sha256": "06789e58289f58c0e848764b6a1fb0d85146eccdfc90b7ec0fbab132bd6ac0fd",
+      "size": 2885
     },
     "plugins/sitelemetry-cursor/.cursor-plugin/plugin.json": {
       "sha256": "5ec35c2d7be7715296a36c91fac1a7ae676dda6f05bad5c0ff24f710713000c3",
@@ -113,6 +69,54 @@
     "plugins/sitelemetry-cursor/mcp.json": {
       "sha256": "2eb7fa9e1e769a632ffd1fa79bd2dce615b7cf18a5b771126013f69007e4e59e",
       "size": 99
+    },
+    "plugins/sitelemetry/.claude-plugin/plugin.json": {
+      "sha256": "890b79aed5b61c29d3cea80d9f54cc28f1e6cafd4d12873fcd8bbe7fc4ee337c",
+      "size": 394
+    },
+    "plugins/sitelemetry/.codex-plugin/plugin.json": {
+      "sha256": "b8f2f42142ac805dad8ca60d9fc6eb496d0a06d998cffbf1194a9789472fcb88",
+      "size": 1794
+    },
+    "plugins/sitelemetry/.mcp.claude.json": {
+      "sha256": "da4d3c48680dc3c2c22801e76bb9487b199f42b8ef84685ccf07bf1162a4ca94",
+      "size": 281
+    },
+    "plugins/sitelemetry/.mcp.json": {
+      "sha256": "f88a2dd6a0d2402800caad77c7ea417a1f52ee04ad64984cce8217b5c58b5d9a",
+      "size": 277
+    },
+    "plugins/sitelemetry/README.md": {
+      "sha256": "cfcbf9207d6e5654198599c8832cac83e639ef61939acf89ad25a74abfc843bd",
+      "size": 5750
+    },
+    "plugins/sitelemetry/assets/sitelemetry-icon.svg": {
+      "sha256": "ac1de8668125af3a1f6232a6a416d148a6c7fc9ef6e1c4a2783bb1a1a45b69ac",
+      "size": 499
+    },
+    "plugins/sitelemetry/assets/sitelemetry-logo-1024.png": {
+      "sha256": "cda624e4fd65681fc35ec3701a494b07162a3399176c1d32cd992751d57c96cd",
+      "size": 17676
+    },
+    "plugins/sitelemetry/local-agent/README.md": {
+      "sha256": "fdc004e8b9e163602fb9502314b518ed7d64de9838b12f4ba9f532b72bffc388",
+      "size": 2101
+    },
+    "plugins/sitelemetry/local-agent/launcher-core.mjs": {
+      "sha256": "0550b38b44d75a02014a03a91b21d1b05f1f7495535920c7683656ae4cd9221d",
+      "size": 24007
+    },
+    "plugins/sitelemetry/local-agent/launcher.mjs": {
+      "sha256": "d0df809c3d61e3ca23d1372c622bfb7abf9dfe51a7741d892a4df9a5ad0cb100",
+      "size": 747
+    },
+    "plugins/sitelemetry/skills/local-web-audit/SKILL.md": {
+      "sha256": "5197ad9ddd407a0b3475f106d3e80dbc7bca79d665a5b54b12e64dbe3d28a4f3",
+      "size": 7409
+    },
+    "plugins/sitelemetry/skills/local-web-audit/agents/openai.yaml": {
+      "sha256": "7f440ccb67e2be30bb2b6c86deee61edc8200fafbe607f7b5d8c46c1723488d4",
+      "size": 383
     }
   }
 }
