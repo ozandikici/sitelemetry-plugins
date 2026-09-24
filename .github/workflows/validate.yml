@@ -67,6 +67,7 @@ jobs:
           const expectedTracked = [...declared, manifestName].sort();
           assert.deepEqual(tracked, expectedTracked, 'tracked files differ from the reviewed release allowlist');
           assert(declared.includes('.gitattributes'), 'public line-ending policy is not declared');
+          assert(declared.includes('LICENSE'), 'repository license is not declared');
           assert(
             declared.includes('.github/workflows/validate.yml'),
             'public validation workflow is not declared'
@@ -124,8 +125,8 @@ jobs:
           assert.equal(codex.version, manifest.version, 'Codex plugin version differs from release');
           assert.equal(claude.version, manifest.version, 'Claude plugin version differs from release');
 
-          // Cursor loads an isolated remote-only plugin, never the local launcher
-          // or general /mcp connection from the other client packages.
+          // Cursor loads an isolated remote-only plugin, never the local launcher,
+          // and connects to the general hosted /mcp endpoint over OAuth.
           const cursorRoot = 'plugins/sitelemetry-cursor';
           const cursorMarketplace = JSON.parse(readFileSync('.cursor-plugin/marketplace.json', 'utf8'));
           assert.equal(cursorMarketplace.name, 'sitelemetry');
@@ -139,8 +140,8 @@ jobs:
           assert.equal(cursor.mcpServers, 'mcp.json');
           assert.equal(cursor.logo, 'assets/sitelemetry-logo-1024.png');
           assert.deepEqual(JSON.parse(readFileSync(`${cursorRoot}/mcp.json`, 'utf8')), {
-            mcpServers: { sitelemetry: { url: 'https://sitelemetry.com/mcp/v2' } }
-          }, 'Cursor must use only the neutral OAuth resource, without secrets or commands');
+            mcpServers: { sitelemetry: { url: 'https://sitelemetry.com/mcp' } }
+          }, 'Cursor must use only the general hosted OAuth endpoint, without secrets or commands');
           for (const field of ['rules', 'skills', 'agents', 'commands', 'hooks']) {
             assert(!Object.hasOwn(cursor, field), `unexpected Cursor executable component: ${field}`);
           }

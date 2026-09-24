@@ -12,14 +12,14 @@ You can also add the following to Cursor's MCP configuration:
 {
   "mcpServers": {
     "sitelemetry": {
-      "url": "https://sitelemetry.com/mcp/v2"
+      "url": "https://sitelemetry.com/mcp"
     }
   }
 }
 ```
 
 Use Cursor's authentication control for Sitelemetry to complete browser
-sign-in and approval. Keep the `/mcp/v2` URL for this integration. Do not put
+sign-in and approval. Keep the `/mcp` URL for this integration. Do not put
 passwords, tokens, or authorization headers in the configuration.
 
 The browser connection offers free account creation. Available audit kinds

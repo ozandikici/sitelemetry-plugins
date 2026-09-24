@@ -23,16 +23,20 @@
       "size": 32
     },
     ".github/workflows/validate.yml": {
-      "sha256": "26b37e39fe68e945a66de6c741907f99e0eebed0891c04c3b4e9e8e2541b16f2",
-      "size": 8015
+      "sha256": "1195555d4340a0d434b972606ad6c241f63863ff733cdf5cf0bd226782cdff78",
+      "size": 8108
+    },
+    "LICENSE": {
+      "sha256": "f377f352bf7e728ba517617215cfc6229bf9700a61f88f2c57f53309d6b93e78",
+      "size": 1068
     },
     "README.md": {
-      "sha256": "c1a63cb7fada152e82123cc81058a872ae80ad8787955408baf7b0c8e208a168",
-      "size": 3135
+      "sha256": "5a6ad981b2209a2f9a2e112d6e0e4e7a535febcfc71a5bc83f24e82423522cad",
+      "size": 3510
     },
     "docs/cursor.md": {
-      "sha256": "373db7e0666f32976f79f6871c9077835d9bab03d7f3fdd23de45d444f61a799",
-      "size": 1527
+      "sha256": "eb149a4db607b31aedd1862b29ebbb74a20c27cc2939985c8483954ed193cce9",
+      "size": 1521
     },
     "docs/gemini-cli.md": {
       "sha256": "caced10c0557ce6580e451ec066e4bbfa3734ebe28a5d5e3a5e4ef4b6446bb62",
@@ -47,7 +51,7 @@
       "size": 2885
     },
     "plugins/sitelemetry-cursor/.cursor-plugin/plugin.json": {
-      "sha256": "5ec35c2d7be7715296a36c91fac1a7ae676dda6f05bad5c0ff24f710713000c3",
+      "sha256": "2aa8d7ed472d5659f3fea81e6f00499c22865830eb954236a1fa8b9572727953",
       "size": 655
     },
     "plugins/sitelemetry-cursor/LICENSE": {
@@ -55,8 +59,8 @@
       "size": 1068
     },
     "plugins/sitelemetry-cursor/README.md": {
-      "sha256": "0a4d8adcccd9ce34dfbf195d303b471f5c6932c00923cfe7b6aef32d5c0e4e3f",
-      "size": 1986
+      "sha256": "6ffe1294adf9fb83dddfadf789f4b0c21f1295a1419d549905d290c42d0b1162",
+      "size": 1942
     },
     "plugins/sitelemetry-cursor/assets/sitelemetry-icon.svg": {
       "sha256": "ac1de8668125af3a1f6232a6a416d148a6c7fc9ef6e1c4a2783bb1a1a45b69ac",
@@ -67,8 +71,8 @@
       "size": 17676
     },
     "plugins/sitelemetry-cursor/mcp.json": {
-      "sha256": "2eb7fa9e1e769a632ffd1fa79bd2dce615b7cf18a5b771126013f69007e4e59e",
-      "size": 99
+      "sha256": "3f6503cce3638bc59d78bd205e09820507c3124a7248c0ea28940fb0f5485ed3",
+      "size": 96
     },
     "plugins/sitelemetry/.claude-plugin/plugin.json": {
       "sha256": "890b79aed5b61c29d3cea80d9f54cc28f1e6cafd4d12873fcd8bbe7fc4ee337c",
