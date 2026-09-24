@@ -30,7 +30,7 @@ when access or verification is missing. For account access information, see
 
 ## Data and scope
 
-The plugin connects to `https://sitelemetry.com/mcp/v2` over HTTPS using OAuth.
+The plugin connects to `https://sitelemetry.com/mcp` over HTTPS using OAuth.
 It sends requested target URLs and audit options to Sitelemetry Cloud. Audit
 requests and results are returned to Cursor and may be processed by its model
 provider under your Cursor settings. It installs no local executable, hooks,
@@ -44,5 +44,4 @@ Review the [privacy policy](https://sitelemetry.com/privacy) and
 
 The Cursor configuration and documentation are licensed under the included
 [MIT license](LICENSE). Sitelemetry names and logos remain trademarks of their
-owner. This license does not license the remote Sitelemetry service or other
-integrations in this repository.
+owner. This license does not license the remote Sitelemetry service.

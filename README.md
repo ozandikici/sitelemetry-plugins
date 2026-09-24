@@ -11,7 +11,7 @@ Codex and Claude Code package version: `0.4.2`
 
 The [Cursor plugin](plugins/sitelemetry-cursor/README.md) connects to Sitelemetry
 Cloud using OAuth. It provides seven website audit tools through the
-`https://sitelemetry.com/mcp/v2` endpoint. See the
+`https://sitelemetry.com/mcp` endpoint. See the
 [Cursor setup guide](docs/cursor.md) for manual MCP configuration.
 
 ## Connect in Gemini CLI
@@ -81,3 +81,11 @@ Documentation: <https://sitelemetry.com/mcp-guide>
 Privacy: <https://sitelemetry.com/privacy>
 
 Terms: <https://sitelemetry.com/terms>
+
+## License
+
+The files in this repository are licensed under the [MIT license](LICENSE).
+Sitelemetry names and logos remain trademarks of their owner. The license does
+not cover the remote Sitelemetry service, the signed Local Agent binary that the
+launcher downloads, or Sitelemetry's proprietary application and audit-engine
+source, none of which are part of this repository.
