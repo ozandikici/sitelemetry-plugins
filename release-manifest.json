@@ -11,8 +11,8 @@
       "size": 377
     },
     ".claude-plugin/marketplace.json": {
-      "sha256": "a909504763d8da00c86e9e38e1a7e263edc352ce388c03bc783559ddf09d641e",
-      "size": 602
+      "sha256": "11388637a5396c2890d9228f1aa61db479c8772c9dbe2ea9b030532bf8989ac4",
+      "size": 599
     },
     ".cursor-plugin/marketplace.json": {
       "sha256": "602a0048cbc0fcd091c3f0405a8a03c840ac5b7ce8c6423c08f4d4bbe74d0359",
@@ -79,8 +79,8 @@
       "size": 394
     },
     "plugins/sitelemetry/.codex-plugin/plugin.json": {
-      "sha256": "b8f2f42142ac805dad8ca60d9fc6eb496d0a06d998cffbf1194a9789472fcb88",
-      "size": 1794
+      "sha256": "ae825709d8d4ea7e594003d31e6f8086f326b26b9992181f0fa4f56cec3d77e0",
+      "size": 1791
     },
     "plugins/sitelemetry/.mcp.claude.json": {
       "sha256": "da4d3c48680dc3c2c22801e76bb9487b199f42b8ef84685ccf07bf1162a4ca94",
