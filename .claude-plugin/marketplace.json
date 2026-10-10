@@ -1,6 +1,6 @@
 {
   "name": "sitelemetry",
-  "description": "Sitelemetry Cloud and signed loopback-only Local Agent for website assurance.",
+  "description": "Sitelemetry Cloud and signed loopback-only Local Agent for website audits.",
   "owner": {
     "name": "Sitelemetry",
     "email": "support@sitelemetry.com"

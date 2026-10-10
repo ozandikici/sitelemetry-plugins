@@ -21,7 +21,7 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Sitelemetry",
-    "shortDescription": "Cloud and local website assurance",
+    "shortDescription": "Cloud and local website audits",
     "longDescription": "Audit production websites through Sitelemetry's OAuth-protected cloud service, or inspect localhost development sites through the signed loopback-only Local Agent. The local engine is delivered as a verified platform binary without shipping Sitelemetry's proprietary source. Cover security, technical SEO, AI visibility, analytics integrations, accessibility, and performance with prioritized evidence and remediation guidance.",
     "developerName": "Sitelemetry",
     "category": "Developer Tools",
